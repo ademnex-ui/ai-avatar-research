@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Аватары Девушек — Исследование Ниши 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --text-primary: #ffffff;
+            --text-secondary: #8b949e;
+            --accent: #7c3aed;
+            --accent-light: #a78bfa;
+            --gradient: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(13, 17, 23, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            scrollbar-width: thin;
+        }
+
+        .nav-content::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .nav-content::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        .nav-content::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            background: radial-gradient(ellipse at top, rgba(124, 58, 237, 0.15) 0%, transparent 60%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: var(--accent-light);
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 40px rgba(124, 58, 237, 0.2);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(124, 58, 237, 0.2);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--accent-light);
+            font-weight: 500;
+        }
+
+        .badge.success {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: #10b981;
+            color: #6ee7b7;
+        }
+
+        .badge.warning {
+            background: rgba(245, 158, 11, 0.2);
+            border-color: #f59e0b;
+            color: #fcd34d;
+        }
+
+        .card-content {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .card-content p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Expert Cards (special layout) */
+        .expert-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .expert-card:hover {
+            transform: translateX(10px);
+            border-color: var(--accent);
+        }
+
+        .expert-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .expert-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .expert-channel {
+            color: var(--accent-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .expert-subs {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .expert-info {
+            display: grid;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            min-width: 120px;
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            margin: 1rem 0;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .progress-track {
+            height: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 4px;
+            transition: width 1s ease-out;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            padding: 1.5rem;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            margin: 0 2rem;
+            transition: transform 0.3s;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.05);
+            border-color: var(--accent);
+        }
+
+        .timeline-year {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            box-shadow: 0 0 0 4px var(--bg-primary), 0 0 0 8px var(--accent);
+        }
+
+        /* Tool Cards with Fire Icons */
+        .tool-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .tool-card:hover {
+            transform: translateX(10px);
+            border-color: var(--accent);
+        }
+
+        .tool-fire {
+            font-size: 1.5rem;
+            min-width: 80px;
+        }
+
+        .tool-name {
+            flex: 1;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .tool-desc {
+            flex: 2;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .tool-status {
+            padding: 0.5rem 1rem;
+            background: rgba(124, 58, 237, 0.2);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--accent-light);
+            white-space: nowrap;
+        }
+
+        /* Monetization List */
+        .monetization-list {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .monetization-item {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .monetization-item:hover {
+            transform: translateX(10px);
+            border-color: var(--accent);
+        }
+
+        .monetization-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .monetization-icon {
+            font-size: 2.5rem;
+        }
+
+        .monetization-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .monetization-income {
+            font-size: 1.2rem;
+            color: var(--accent-light);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Insights Box */
+        .insight-box {
+            background: rgba(124, 58, 237, 0.1);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .insight-box h3 {
+            margin-top: 0;
+        }
+
+        .insight-box ul {
+            margin-left: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .insight-box ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Conclusion Section */
+        .conclusion {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--accent);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-top: 3rem;
+        }
+
+        .conclusion h2::after {
+            display: none;
+        }
+
+        .do-dont {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .do-box, .dont-box {
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .do-box {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid #10b981;
+        }
+
+        .dont-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid #ef4444;
+        }
+
+        .do-box h3 {
+            color: #6ee7b7;
+            margin-top: 0;
+        }
+
+        .dont-box h3 {
+            color: #fca5a5;
+            margin-top: 0;
+        }
+
+        .do-box ul, .dont-box ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .do-box li::before {
+            content: '✅ ';
+            margin-right: 0.5rem;
+        }
+
+        .dont-box li::before {
+            content: '❌ ';
+            margin-right: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-secondary);
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 1rem 3rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start;
+                padding-left: 50px;
+            }
+
+            .timeline-content {
+                margin: 0;
+            }
+
+            .timeline-dot {
+                left: 20px;
+                transform: translateX(-50%);
+            }
+
+            .tool-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .do-dont {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <a href="#hero">🏠 Главная</a>
+            <a href="#overview">📊 Обзор</a>
+            <a href="#experts-ru">🇷🇺 Эксперты РФ</a>
+            <a href="#experts-west">🌎 Эксперты Запад</a>
+            <a href="#courses">🎓 Курсы</a>
+            <a href="#tools">🛠 Инструменты</a>
+            <a href="#top-avatars">⭐ Топ AI-аватары</a>
+            <a href="#monetization">💰 Монетизация</a>
+            <a href="#patterns">🔍 Закономерности</a>
+            <a href="#trend-stage">📈 Стадия тренда</a>
+            <a href="#video-analysis">🎬 Анализ видео</a>
+            <a href="#reddit">💬 Reddit</a>
+            <a href="#twitter">🐦 Twitter</a>
+            <a href="#conclusion">✅ Выводы</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
+        <h1>AI-Аватары Девушек</h1>
+        <p class="hero-subtitle">Исследование ниши • 2026</p>
+        
+        <div class="hero-stats">
+            <div class="stat-card">
+                <div class="stat-number">$800–$60K</div>
+                <div class="stat-label">Заработок в месяц</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">13+</div>
+                <div class="stat-label">Топ инструментов</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Успешных AI-аватаров</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">ПИК</div>
+                <div class="stat-label">Стадия тренда 2024-2026</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Overview Section -->
+        <section id="overview">
+            <h2>📊 Обзор ниши</h2>
+            <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
+                AI-аватары девушек (AI influencers / AI models) — быстрорастущая ниша, в которой виртуальные персонажи, созданные с помощью нейросетей, ведут активность в социальных сетях и монетизируются через различные каналы.
+            </p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">📈</span>
+                        <span class="card-title">Стадия тренда</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Активный рост, пик популярности (2024-2026)</strong></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">🚪</span>
+                        <span class="card-title">Барьер входа</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Низкий</strong> — можно начать бесплатно</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">💵</span>
+                        <span class="card-title">Монетизация</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>$800-$60,000/месяц</strong> (зависит от аудитории и стратегии)</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">📱</span>
+                        <span class="card-title">Основные платформы</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Instagram, TikTok, OnlyFans, Fanvue</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>💰 Формы монетизации</h3>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Рекламные интеграции</div>
+                    <div class="card-content">$1K-$10K за пост</div>
+                </div>
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Платные подписки</div>
+                    <div class="card-content">OnlyFans, Fanvue, Patreon</div>
+                </div>
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Продажа контента</div>
+                    <div class="card-content">Фото/видео пакеты</div>
+                </div>
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Мерч</div>
+                    <div class="card-content">Брендированные товары</div>
+                </div>
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Курсы и гайды</div>
+                    <div class="card-content">$50-$5,000</div>
+                </div>
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Партнерские программы</div>
+                    <div class="card-content">Агентское управление AI-моделями</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Russian Experts Section -->
+        <section id="experts-ru">
+            <h2>🇷🇺 Эксперты РФ</h2>
+            
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">Ринат Шакиров</div>
+                        <a href="https://youtube.com/@shakirov_ai" class="expert-channel">@shakirov_ai</a>
+                    </div>
+                    <div class="expert-subs">37,1 тыс.</div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>AI-модели, Kling, Nano Banana</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Курс:</span>
+                        <span>Есть (TG)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>~2024-Q3</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>TG-канал, курсы</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">Serge_AI</div>
+                        <a href="https://youtube.com/@serge_ai" class="expert-channel">@serge_ai</a>
+                    </div>
+                    <div class="expert-subs">101 тыс.</div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>AI-блогер от А до Я, SeaArt</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Курс:</span>
+                        <span>Нет</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>2022</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>YouTube, консультации</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">Рустам Габдуллазанов</div>
+                        <a href="https://youtube.com/@r_gabdullazanov" class="expert-channel">@r_gabdullazanov</a>
+                    </div>
+                    <div class="expert-subs">2,84 тыс.</div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>AI OFM, Fanvue</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Курс:</span>
+                        <span>Нет</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>~2024-Q4</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>YouTube</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">Шергин говорит</div>
+                        <a href="https://youtube.com/@scherginstas" class="expert-channel">@scherginstas</a>
+                    </div>
+                    <div class="expert-subs">1,85 тыс.</div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>AI-модели, Highsfield, Kling</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Курс:</span>
+                        <span>Нет</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>~2024-Q4</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>YouTube</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">АндреИИч</div>
+                        <a href="https://youtube.com/@aiendy" class="expert-channel">@aiendy</a>
+                    </div>
+                    <div class="expert-subs">4,55 тыс.</div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>AI-модели, Fanvue, Nan Banana</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Курс:</span>
+                        <span>Есть</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>~2024-Q3</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>Курс, TG-канал</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">Фантом</div>
+                        <a href="https://youtube.com/@fanto-mm" class="expert-channel">@fanto-mm</a>
+                    </div>
+                    <div class="expert-subs">422</div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>AI OFM, ComfyUI, LoRA</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Курс:</span>
+                        <span>Да (TG)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>~2024</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>TG-группа, консультации</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h3>📌 Дополнительные эксперты (из поиска):</h3>
+                <ul>
+                    <li><strong>OFM Lab</strong> — фундаментальные курсы по AI OFM</li>
+                    <li><strong>Ivanich | AI OFM</strong> — гайды и стратегии</li>
+                    <li><strong>OFM Factory</strong> — кейсы заработка ($1M за месяц)</li>
+                    <li><strong>AI Cartel</strong> — LoRA тренировка, вайб-кодинг</li>
+                    <li><strong>Mikie Carrera</strong> — полные гайды по AI OFM 2026</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Western Experts Section -->
+        <section id="experts-west">
+            <h2>🌎 Эксперты Запад</h2>
+            
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">David Editor</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">YouTube</div>
+                    </div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>Create Viral AI Model Girl</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Курс:</span>
+                        <span>Бесплатные туториалы</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>2025</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>YouTube, промпты</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">Augmented Startups</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">augmentedstartups.com</div>
+                    </div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>AI Influencer Course</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Стоимость:</span>
+                        <span>~$199</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>2024</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>Курсы</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">Арнольд Оберлейтер</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Udemy</div>
+                    </div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>AI Influencer заработок</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Стоимость:</span>
+                        <span>150₽ (~$2)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>2025</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>Udemy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">Levelsio</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Twitter @levelsio</div>
+                    </div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>Photo AI, AI influencers</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Продукт:</span>
+                        <span>SaaS подписка</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>2023</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>Photo AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">Noah AI</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Twitter @Noah_Ai_88</div>
+                    </div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>AI Instagram influencer</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Курс:</span>
+                        <span>Бесплатные гайды</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>2025</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>Продажа гайдов</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">Ben (Business_Ideas)</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Reddit</div>
+                    </div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>AI Influencer Business</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Стоимость:</span>
+                        <span>$5K консалтинг</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>2024</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>Консалтинг</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="expert-card">
+                <div class="expert-header">
+                    <div>
+                        <div class="expert-name">Emma & Jade Manager</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Reddit (EntrepreneurRideAlong)</div>
+                    </div>
+                </div>
+                <div class="expert-info">
+                    <div class="info-row">
+                        <span class="info-label">Тематика:</span>
+                        <span>AI Influencer Management</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Начало:</span>
+                        <span>2024</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Монетизация:</span>
+                        <span>Управление AI-моделями</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses">
+            <h2>🎓 Курсы и обучение</h2>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 1rem;">AI Influencer Course</div>
+                    <div class="card-meta">
+                        <span class="badge">~$199</span>
+                        <span class="badge success">Augmented Startups</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Обещания:</strong> Создание AI-инфлюенсера без тех. навыков</p>
+                        <p><strong>Инструменты:</strong> Stable Diffusion, DeepFake</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 1rem;">Инфлюенсер на базе ИИ</div>
+                    <div class="card-meta">
+                        <span class="badge">150₽ (~$2)</span>
+                        <span class="badge success">Udemy</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Обещания:</strong> Заработок на AI-инфлюенсерах</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 1rem;">AI Influencer: заработок в соцсетях</div>
+                    <div class="card-meta">
+                        <span class="badge">150₽ (~$2)</span>
+                        <span class="badge success">Арнольд Оберлейтер</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Обещания:</strong> Заработок с фейковыми соц. сетями</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 1rem;">Курс от АндреИИч</div>
+                    <div class="card-meta">
+                        <span class="badge warning">Данные не найдены</span>
+                        <span class="badge success">TG</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Обещания:</strong> AI-модели с нуля</p>
+                        <p><strong>Инструменты:</strong> Nan Banana, Fanvue</p>
+                        <p><strong>Отзывы:</strong> Положительные (комментарии YouTube)</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 1rem;">Фундаментальный AI OFM</div>
+                    <div class="card-meta">
+                        <span class="badge warning">Данные не найдены</span>
+                        <span class="badge success">OFM Lab</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Обещания:</strong> От А до Я создание AI-моделей</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 1rem;">LoRA тренировка</div>
+                    <div class="card-meta">
+                        <span class="badge warning">Данные не найдены</span>
+                        <span class="badge success">AI Cartel</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Обещания:</strong> Создание и тренировка LoRA</p>
+                        <p><strong>Инструменты:</strong> ComfyUI, LoRA</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h3>📚 Типичное содержание курсов:</h3>
+                <ul>
+                    <li>Генерация уникального лица персонажа</li>
+                    <li>Консистентность образа (LoRA, Face Swap)</li>
+                    <li>Создание видео контента (Motion Control, Kling)</li>
+                    <li>Продвижение в соцсетях (Instagram, TikTok)</li>
+                    <li>Монетизация (Fanvue, OnlyFans, реклама)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools">
+            <h2>🛠 Инструменты</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Топ инструменты по упоминаниям в контенте экспертов:</p>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥🔥🔥🔥</div>
+                <div class="tool-name">Nano Banana Pro</div>
+                <div class="tool-desc">Генерация фотореалистичных лиц</div>
+                <div class="tool-status">Платная подписка</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥🔥🔥🔥</div>
+                <div class="tool-name">Kling AI</div>
+                <div class="tool-desc">Анимация (Motion Control, видео)</div>
+                <div class="tool-status">Кредитная система</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥🔥🔥</div>
+                <div class="tool-name">Midjourney</div>
+                <div class="tool-desc">Генерация изображений (эстетика)</div>
+                <div class="tool-status">Платная подписка</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥🔥🔥</div>
+                <div class="tool-name">SeaArt</div>
+                <div class="tool-desc">Генерация + Face Swap + LoRA</div>
+                <div class="tool-status">Freemium</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥🔥</div>
+                <div class="tool-name">ComfyUI</div>
+                <div class="tool-desc">Продвинутая генерация, LoRA</div>
+                <div class="tool-status">Бесплатно (локально)</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥🔥</div>
+                <div class="tool-name">Stable Diffusion</div>
+                <div class="tool-desc">Генерация изображений</div>
+                <div class="tool-status">Бесплатно</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥🔥</div>
+                <div class="tool-name">Flux</div>
+                <div class="tool-desc">Генерация (альтернатива Midjourney)</div>
+                <div class="tool-status">Freemium</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥</div>
+                <div class="tool-name">RealVis</div>
+                <div class="tool-desc">Фотореалистичная генерация</div>
+                <div class="tool-status">Модель для SD</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥</div>
+                <div class="tool-name">Luma Dream Machine</div>
+                <div class="tool-desc">Анимация видео</div>
+                <div class="tool-status">Кредитная система</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥</div>
+                <div class="tool-name">Higgsfield</div>
+                <div class="tool-desc">Генерация + Motion Control</div>
+                <div class="tool-status">Кредитная система</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥</div>
+                <div class="tool-name">ElevenLabs</div>
+                <div class="tool-desc">Генерация голоса</div>
+                <div class="tool-status">Freemium</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥</div>
+                <div class="tool-name">ChatGPT / Claude</div>
+                <div class="tool-desc">Создание промптов</div>
+                <div class="tool-status">Freemium</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-fire">🔥🔥</div>
+                <div class="tool-name">Pinterest</div>
+                <div class="tool-desc">Поиск референсов</div>
+                <div class="tool-status">Бесплатно</div>
+            </div>
+
+            <div class="insight-box">
+                <h3>⚙️ Workflow генерации (типичный):</h3>
+                <ol style="margin-left: 1.5rem; color: var(--text-secondary);">
+                    <li><strong>Референс</strong> → Pinterest</li>
+                    <li><strong>Промпт</strong> → ChatGPT/Claude</li>
+                    <li><strong>Лицо</strong> → Nano Banana Pro / Midjourney</li>
+                    <li><strong>Консистентность</strong> → LoRA (SeaArt / ComfyUI)</li>
+                    <li><strong>Разные позы</strong> → Face Swap (SeaArt)</li>
+                    <li><strong>Видео</strong> → Kling AI (Motion Control) / Luma</li>
+                    <li><strong>Голос</strong> → ElevenLabs (опционально)</li>
+                    <li><strong>Апскейл</strong> → Topaz / ESRGAN</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Top AI Avatars Section -->
+        <section id="top-avatars">
+            <h2>⭐ Топ AI-аватары девушек</h2>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">👑</span>
+                        <div>
+                            <div class="card-title">Lil Miquela</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">@lilmiquela</div>
+                        </div>
+                    </div>
+                    <div class="card-meta">
+                        <span class="badge success">3M+ подписчиков</span>
+                        <span class="badge">2016</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Монетизация:</strong> $10M/год (реклама, музыка, мерч)</p>
+                        <p><strong>Особенности:</strong> Мулатка, певица, активистка</p>
+                        <p><strong>Успех:</strong> Первопроходец, music career, CGI качество</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">💗</span>
+                        <div>
+                            <div class="card-title">Aitana Lopez</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">@fit_aitana</div>
+                        </div>
+                    </div>
+                    <div class="card-meta">
+                        <span class="badge success">380K+ подписчиков</span>
+                        <span class="badge">2023</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Монетизация:</strong> $10K-$11K/мес (реклама, Fanvue)</p>
+                        <p><strong>Особенности:</strong> Розовые волосы, фитнес</p>
+                        <p><strong>Успех:</strong> Фотореализм, активный контент</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">👗</span>
+                        <div>
+                            <div class="card-title">Noonoouri</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">@noonoouri</div>
+                        </div>
+                    </div>
+                    <div class="card-meta">
+                        <span class="badge success">500K+ подписчиков</span>
+                        <span class="badge">2018</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Монетизация:</strong> $500K/год (модные бренды)</p>
+                        <p><strong>Особенности:</strong> Кукольный стиль, мода</p>
+                        <p><strong>Успех:</strong> Fashion partnerships (Dior, Balenciaga)</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">✨</span>
+                        <div>
+                            <div class="card-title">Shudu Gram</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">@shudu.gram</div>
+                        </div>
+                    </div>
+                    <div class="card-meta">
+                        <span class="badge success">240K+ подписчиков</span>
+                        <span class="badge">2017</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Монетизация:</strong> $2K+ за спонсорство</p>
+                        <p><strong>Особенности:</strong> Первая цифровая супермодель</p>
+                        <p><strong>Успех:</strong> Hyper-realistic, Balmain, Fenty</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">🌸</span>
+                        <div>
+                            <div class="card-title">Imma</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">@imma.gram</div>
+                        </div>
+                    </div>
+                    <div class="card-meta">
+                        <span class="badge success">390K+ подписчиков</span>
+                        <span class="badge">2018</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Монетизация:</strong> Реклама (IKEA, Nike)</p>
+                        <p><strong>Особенности:</strong> Японская, розовый боб</p>
+                        <p><strong>Успех:</strong> Азиатский рынок, Japanese aesthetics</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">🌱</span>
+                        <div>
+                            <div class="card-title">Milla Sofia</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">@millasofiafin</div>
+                        </div>
+                    </div>
+                    <div class="card-meta">
+                        <span class="badge success">100K+ подписчиков</span>
+                        <span class="badge">2020</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Монетизация:</strong> Бренд-партнерства</p>
+                        <p><strong>Особенности:</strong> Финская, экология</p>
+                        <p><strong>Успех:</strong> Sustainability focus</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">💰</span>
+                        <div>
+                            <div class="card-title">Emma & Jade (Reddit case)</div>
+                        </div>
+                    </div>
+                    <div class="card-meta">
+                        <span class="badge">2024</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Монетизация:</strong> $10K/мес каждая (Fanvue)</p>
+                        <p><strong>Особенности:</strong> AI OFM модели</p>
+                        <p><strong>Успех:</strong> Консистентность, активное общение</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">🚀</span>
+                        <div>
+                            <div class="card-title">Noah's AI Girl</div>
+                        </div>
+                    </div>
+                    <div class="card-meta">
+                        <span class="badge success">600K подписчиков</span>
+                        <span class="badge">2025</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Монетизация:</strong> $60K/мес (Reels, реклама)</p>
+                        <p><strong>Особенности:</strong> Секретный образ</p>
+                        <p><strong>Успех:</strong> Viral Reels, engagement</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">🎌</span>
+                        <div>
+                            <div class="card-title">Аниме AI (Reddit)</div>
+                        </div>
+                    </div>
+                    <div class="card-meta">
+                        <span class="badge">2024-12</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Монетизация:</strong> $800/30 дней</p>
+                        <p><strong>Особенности:</strong> Аниме стиль</p>
+                        <p><strong>Успех:</strong> Отличие от mainstream</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h3>🎯 Общие закономерности успеха:</h3>
+                <ul>
+                    <li><strong>Уникальная внешность</strong> (не стандартная красотка)</li>
+                    <li><strong>Консистентность образа</strong> (одинаковое лицо на всех фото/видео)</li>
+                    <li><strong>История/лор персонажа</strong> (backstory, personality)</li>
+                    <li><strong>Активная публикация</strong> (минимум 3-5 постов/неделю)</li>
+                    <li><strong>Engagement</strong> (ответы на комментарии, DM)</li>
+                    <li><strong>Ниша/специализация</strong> (фитнес, мода, лайфстайл)</li>
+                    <li><strong>Качество контента</strong> (фотореализм или стильная стилизация)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Monetization Section -->
+        <section id="monetization">
+            <h2>💰 Монетизация — все формы</h2>
+
+            <div class="monetization-list">
+                <div class="monetization-item">
+                    <div class="monetization-header">
+                        <span class="monetization-icon">📢</span>
+                        <span class="monetization-title">Рекламные интеграции</span>
+                    </div>
+                    <div class="monetization-income">$500-$10,000 за пост</div>
+                    <div class="card-content">
+                        <p><strong>Платформы:</strong> Instagram, TikTok, YouTube</p>
+                        <p><strong>Примеры:</strong> Одежда, косметика, гаджеты, приложения</p>
+                    </div>
+                </div>
+
+                <div class="monetization-item">
+                    <div class="monetization-header">
+                        <span class="monetization-icon">🔞</span>
+                        <span class="monetization-title">Платные подписки (Adult)</span>
+                    </div>
+                    <div class="monetization-income">$1K-$60K/месяц</div>
+                    <div class="card-content">
+                        <p><strong>Платформы:</strong> OnlyFans, Fanvue, Fansly</p>
+                        <p><strong>Контент:</strong> Откровенные фото/видео, DM общение</p>
+                        <p><strong>⚠️ Проблема:</strong> Верификация (OnlyFans требует реального лица)</p>
+                        <p><strong>✅ Решение:</strong> Fanvue (лоялен к AI-контенту)</p>
+                    </div>
+                </div>
+
+                <div class="monetization-item">
+                    <div class="monetization-header">
+                        <span class="monetization-icon">👥</span>
+                        <span class="monetization-title">Платные подписки (SFW)</span>
+                    </div>
+                    <div class="monetization-income">$500-$5K/месяц</div>
+                    <div class="card-content">
+                        <p><strong>Платформы:</strong> Patreon, Boosty, Telegram Premium</p>
+                        <p><strong>Контент:</strong> Эксклюзивные фото, behind-the-scenes</p>
+                    </div>
+                </div>
+
+                <div class="monetization-item">
+                    <div class="monetization-header">
+                        <span class="monetization-icon">💾</span>
+                        <span class="monetization-title">Продажа контента</span>
+                    </div>
+                    <div class="monetization-income">$5-$50 за пак</div>
+                    <div class="card-content">
+                        <p><strong>Формат:</strong> Фото/видео паки</p>
+                        <p><strong>Платформы:</strong> Gumroad, Telegram бот</p>
+                    </div>
+                </div>
+
+                <div class="monetization-item">
+                    <div class="monetization-header">
+                        <span class="monetization-icon">👕</span>
+                        <span class="monetization-title">Мерч и брендированные товары</span>
+                    </div>
+                    <div class="monetization-income">$100-$2K/месяц (пассивный)</div>
+                    <div class="card-content">
+                        <p><strong>Примеры:</strong> Футболки, стикеры, постеры</p>
+                        <p><strong>Платформы:</strong> Printful, Teespring</p>
+                    </div>
+                </div>
+
+                <div class="monetization-item">
+                    <div class="monetization-header">
+                        <span class="monetization-icon">🎓</span>
+                        <span class="monetization-title">Продажа курсов и гайдов</span>
+                    </div>
+                    <div class="monetization-income">$1K-$10K+/месяц</div>
+                    <div class="card-content">
+                        <p><strong>Форматы:</strong> PDF-гайды, видео-курсы, консультации</p>
+                        <p><strong>Цена:</strong> $50-$5,000</p>
+                    </div>
+                </div>
+
+                <div class="monetization-item">
+                    <div class="monetization-header">
+                        <span class="monetization-icon">🏢</span>
+                        <span class="monetization-title">Агентское управление</span>
+                    </div>
+                    <div class="monetization-income">$10K+/месяц</div>
+                    <div class="card-content">
+                        <p><strong>Формат:</strong> Управление несколькими AI-моделями</p>
+                        <p><strong>Преимущества:</strong> Масштабирование</p>
+                    </div>
+                </div>
+
+                <div class="monetization-item">
+                    <div class="monetization-header">
+                        <span class="monetization-icon">📱</span>
+                        <span class="monetization-title">Реклама в соцсетях</span>
+                    </div>
+                    <div class="monetization-income">Зависит от платформы</div>
+                    <div class="card-content">
+                        <p><strong>Instagram Reels:</strong> Программа бонусов (требует условий)</p>
+                        <p><strong>TikTok Creator Fund:</strong> $0.02-$0.04 за 1000 просмотров</p>
+                        <p><strong>YouTube Shorts:</strong> Программа доходов (требует 1K подписчиков)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patterns Section -->
+        <section id="patterns">
+            <h2>🔍 Закономерности у успешных экспертов</h2>
+
+            <h3>✨ Общие черты топ-экспертов:</h3>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🚀</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Ранний вход</div>
+                    <div class="card-content">2022-2024 — первопроходцы захватили аудиторию</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🎯</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Конкретика, не вода</div>
+                    <div class="card-content">Четкие инструкции, пошаговые гайды</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">💎</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Бесплатный + платный</div>
+                    <div class="card-content">YouTube бесплатно → курс платно</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Прозрачность</div>
+                    <div class="card-content">Показывают реальные результаты, кейсы</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🎨</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Ниша в нише</div>
+                    <div class="card-content">Фокус на AI-модели, а не общий AI</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">👥</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Community building</div>
+                    <div class="card-content">Telegram-каналы, Discord сервера</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🔄</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Постоянное обновление</div>
+                    <div class="card-content">Следят за новыми инструментами</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🎬</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Демонстрация процесса</div>
+                    <div class="card-content">Screen recordings, tutorials</div>
+                </div>
+            </div>
+
+            <div class="insight-box" style="background: rgba(239, 68, 68, 0.1); border-left-color: #ef4444;">
+                <h3 style="color: #fca5a5;">🚩 Красные флаги (признаки инфоцыган):</h3>
+                <ul>
+                    <li>❌ Нет реальных примеров работ</li>
+                    <li>❌ Обещания "$100K за месяц без усилий"</li>
+                    <li>❌ Требуют оплату без демо-контента</li>
+                    <li>❌ Скрывают инструменты за paywall</li>
+                    <li>❌ Нет обратной связи в комментариях</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Trend Stage Section -->
+        <section id="trend-stage">
+            <h2>📈 Стадия тренда</h2>
+            
+            <div class="stat-card" style="max-width: 600px; margin: 2rem auto; text-align: center;">
+                <div class="stat-number" style="font-size: 3rem;">ПИК / РАННИЙ РОСТ</div>
+                <div class="stat-label" style="font-size: 1.2rem;">Текущая стадия: 2024-2026</div>
+            </div>
+
+            <h3>📊 Индикаторы:</h3>
+            <div class="cards-grid">
+                <div class="card" style="border-color: #10b981;">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">✅</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Рост интереса</div>
+                    <div class="card-content">Google Trends показывает рост запросов с 2023</div>
+                </div>
+
+                <div class="card" style="border-color: #10b981;">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">✅</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Инфраструктура созрела</div>
+                    <div class="card-content">Инструменты доступны и просты (Nano Banana, Kling)</div>
+                </div>
+
+                <div class="card" style="border-color: #10b981;">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">✅</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Монетизация работает</div>
+                    <div class="card-content">Реальные кейсы $10K+/месяц</div>
+                </div>
+
+                <div class="card" style="border-color: #10b981;">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">✅</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Медиа освещение</div>
+                    <div class="card-content">Mainstream медиа (Business Insider, Forbes) пишут про AI-инфлюенсеров</div>
+                </div>
+
+                <div class="card" style="border-color: #f59e0b;">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">⚠️</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Насыщение начинается</div>
+                    <div class="card-content">Много одинаковых "идеальных блондинок"</div>
+                </div>
+
+                <div class="card" style="border-color: #f59e0b;">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">⚠️</div>
+                    <div class="card-title" style="margin-bottom: 0.5rem;">Платформы реагируют</div>
+                    <div class="card-content">OnlyFans усиливает верификацию</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 3rem;">⏱ Timeline тренда</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2016</div>
+                        <p>Lil Miquela (первопроходец, CGI)</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022</div>
+                        <p>Serge_AI начал учить создавать AI-блогеров</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <p>Бум AI-генерации (Midjourney, Stable Diffusion стали доступны)</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <p>Массовый выход русскоязычных экспертов (Ринат, Шергин, АндреИИч)</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025-2026</div>
+                        <p>Пик популярности, появление множества гайдов и курсов</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h3>🔮 Прогноз:</h3>
+                <ul>
+                    <li><strong>2024-2025:</strong> Активный рост, лучшее время входа для уникальных образов</li>
+                    <li><strong>2026-2027:</strong> Насыщение, требуется высокое качество и уникальность</li>
+                    <li><strong>2028+:</strong> Зрелость, только топ-игроки с брендом</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Video Analysis Section -->
+        <section id="video-analysis">
+            <h2>🎬 Анализ видео от G (6 штук)</h2>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 1rem;">Ринат Шакиров — "Как БЕСПЛАТНО создать ИИ-модель с нуля"</div>
+                    <div class="card-meta">
+                        <span class="badge">37,1 тыс. подписчиков</span>
+                        <span class="badge success">23 тыс. просмотров</span>
+                        <span class="badge">янв 2026</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>О чём:</strong> Пошаговая инструкция создания AI-модели с уникальной внешностью</p>
+                        <p><strong>Инструменты:</strong> Pinterest, ChatGPT, Midjourney, Flux, Nano Banana Pro, Kling AI</p>
+                        <p><strong>Монетизация:</strong> Прямая реклама, создание роликов на заказ, продажа курсов</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 1rem;">Serge_AI — "AI БЛОГЕР от А до Я"</div>
+                    <div class="card-meta">
+                        <span class="badge">101 тыс. подписчиков</span>
+                        <span class="badge success">137 тыс. просмотров</span>
+                        <span class="badge">2024</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>О чём:</strong> Полное руководство по созданию AI-блогера от нуля до монетизации</p>
+                        <p><strong>Инструменты:</strong> SeaArt, Face Swap, AI Face Swap (видео), stock videos</p>
+                        <p><strong>Монетизация:</strong> Платная реклама (таргет) или органика (TikTok, Reels)</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 1rem;">Рустам Габдуллазанов — "СОЗДАНИЕ ИИ МОДЕЛИ С НУЛЯ"</div>
+                    <div class="card-meta">
+                        <span class="badge">2,84 тыс. подписчиков</span>
+                        <span class="badge success">11 тыс. просмотров</span>
+                        <span class="badge">янв 2026</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>О чём:</strong> Пошаговый план создания видео для AI-модели на Fanvue</p>
+                        <p><strong>Инструменты:</strong> Instagram/TikTok, ChatGPT, Hixfield (Nano Banana), Kling, Fanvue</p>
+                        <p><strong>Монетизация:</strong> Fanvue (платные подписки, чаты, эксклюзивный контент)</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 1rem;">Шергин говорит — "ИИ МОДЕЛИ: Как создать, полный гайд"</div>
+                    <div class="card-meta">
+                        <span class="badge">1,85 тыс. подписчиков</span>
+                        <span class="badge success">36 тыс. просмотров</span>
+                        <span class="badge">янв 2026</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>О чём:</strong> Детальный часовой гайд по созданию AI-моделей с уникальной внешностью</p>
+                        <p><strong>Инструменты:</strong> Midjourney, Nano Banana Pro, Kling AI, Luma Dream Machine, Motion Control</p>
+                        <p><strong>Особенности:</strong> Тренд на витилиго, гетерохромию, альбинизм</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 1rem;">АндреИИч — "КАК создать ИИ модель с нуля"</div>
+                    <div class="card-meta">
+                        <span class="badge">4,55 тыс. подписчиков</span>
+                        <span class="badge success">15 тыс. просмотров</span>
+                        <span class="badge">янв 2026</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>О чём:</strong> Создание фотореалистичной AI-модели с вирусным потенциалом</p>
+                        <p><strong>Инструменты:</strong> Nan Banana Pro, Kling 2.1/2.6, Hix, 11 Labs, Pinterest</p>
+                        <p><strong>Монетизация:</strong> Реклама, Fanvue, кастомные аватары для брендов ($1K+)</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title" style="margin-bottom: 1rem;">Фантом — "ИИ МОДЕЛИ на ОНЛИФАНС | С нуля до $1000/месяц"</div>
+                    <div class="card-meta">
+                        <span class="badge">422 подписчика</span>
+                        <span class="badge success">17 тыс. просмотров</span>
+                        <span class="badge">дек 2025</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>О чём:</strong> Технический гайд по созданию AI-модели для OnlyFans через ComfyUI</p>
+                        <p><strong>Инструменты:</strong> ComfyUI, LoRA, Flux, RealVis, SeaArt, Pinterest, ChatGPT/Gemini</p>
+                        <p><strong>Монетизация:</strong> OnlyFans (требует верификацию!), Fanvue</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reddit Section -->
+        <section id="reddit">
+            <h2>💬 Reddit insights</h2>
+
+            <div class="cards-grid">
+                <div class="card" style="border-color: var(--accent);">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🔥</div>
+                    <div class="card-title" style="margin-bottom: 1rem;">$10,000/месяц на управлении AI-инфлюенсерами</div>
+                    <div class="card-meta">
+                        <span class="badge">r/EntrepreneurRideAlong</span>
+                        <span class="badge success">Июнь 2024</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Модели:</strong> Emma и Jade</p>
+                        <p><strong>Доход:</strong> $10K/месяц за 3 месяца</p>
+                        <p><strong>Стратегия:</strong> AI influencer management (создание контента для 2 моделей)</p>
+                        <p><strong>Платформы:</strong> Instagram, Fanvue</p>
+                    </div>
+                </div>
+
+                <div class="card" style="border-color: var(--accent);">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🔥</div>
+                    <div class="card-title" style="margin-bottom: 1rem;">$500,000+ за 10 месяцев</div>
+                    <div class="card-meta">
+                        <span class="badge">r/Business_Ideas</span>
+                        <span class="badge success">Июнь 2025</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Автор:</strong> Ben (показывает лицо и proof)</p>
+                        <p><strong>Доход:</strong> $500K+ за 10 месяцев</p>
+                        <p><strong>Консалтинг:</strong> $5K за 1-on-1</p>
+                        <p><strong>Прозрачность:</strong> Full names, faces, proofs</p>
+                    </div>
+                </div>
+
+                <div class="card" style="border-color: var(--accent);">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🔥</div>
+                    <div class="card-title" style="margin-bottom: 1rem;">$800 за 30 дней — аниме AI-инфлюенсер</div>
+                    <div class="card-meta">
+                        <span class="badge">r/passive_income</span>
+                        <span class="badge success">Март 2025</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Стратегия:</strong> Аниме-стиль вместо реалистичного (дифференциация)</p>
+                        <p><strong>Запуск:</strong> Декабрь 2024</p>
+                        <p><strong>Доход:</strong> $800 за первый месяц</p>
+                        <p><strong>Платформа:</strong> Instagram</p>
+                    </div>
+                </div>
+
+                <div class="card" style="border-color: var(--accent);">
+                    <div class="card-icon" style="font-size: 2.5rem; margin-bottom: 1rem;">🔥</div>
+                    <div class="card-title" style="margin-bottom: 1rem;">$1K за 30 дней — продажа гайда</div>
+                    <div class="card-meta">
+                        <span class="badge">r/passive_income</span>
+                        <span class="badge success">Сентябрь 2024</span>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Продукт:</strong> Гайд по созданию AI-инфлюенсера</p>
+                        <p><strong>Доход:</strong> $1K за 30 дней (продажа гайда)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h3>💡 Инсайты из обсуждений:</h3>
+                <ul>
+                    <li><strong>Higgsfield Earn Program:</strong> ГАРАНТИРОВАННЫЕ выплаты + бонусы за перформанс</li>
+                    <li><strong>OnlyFans верификация:</strong> ПРОБЛЕМА — требует реального человека</li>
+                    <li><strong>Fanvue:</strong> Лоялен к AI-контенту</li>
+                    <li><strong>Реализм vs Стилизация:</strong> Аниме-стиль может быть прибыльнее (меньше конкуренции)</li>
+                    <li><strong>Консистентность:</strong> Главная проблема новичков (лицо меняется от фото к фото)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Twitter Section -->
+        <section id="twitter">
+            <h2>🐦 Twitter/X insights</h2>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">💰</span>
+                        <div>
+                            <div class="card-title">Заработок топ AI-инфлюенсеров</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">от @levelsio</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Lil Miquela:</strong> $10 млн/год</p>
+                        <p><strong>Noonoouri:</strong> $500K/год (модные бренды)</p>
+                        <p><strong>Shudu:</strong> $2K за спонсорство</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">🚀</span>
+                        <div>
+                            <div class="card-title">Noah (@Noah_Ai_88)</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>AI Instagram модель:</strong> 600K подписчиков</p>
+                        <p><strong>Доход:</strong> $60K/месяц</p>
+                        <p><strong>Стратегия:</strong> Viral Reels, никто не знает что AI</p>
+                        <p><strong>Монетизация:</strong> Reels ad revenue, бренды</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">📊</span>
+                        <div>
+                            <div class="card-title">Kamran Hassan (@Rana_kamran43)</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Утверждает:</strong> AI-модели зарабатывают $10K+/месяц</p>
+                        <p><strong>Обещание:</strong> Создание без больших вложений</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-icon">📈</span>
+                        <div>
+                            <div class="card-title">Hasan Rajpoot (@Hasan_4300)</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Утверждает:</strong> AI-модели зарабатывают $20K+/месяц</p>
+                        <p><strong>Гайд:</strong> Создание за минуты</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h3>💡 Инсайты:</h3>
+                <ul>
+                    <li><strong>Секретность:</strong> Многие не раскрывают, что модель AI (больше engagement)</li>
+                    <li><strong>Viral Reels:</strong> Основной драйвер роста</li>
+                    <li><strong>Обещания:</strong> Много "гуру" обещают лёгкие деньги (осторожность!)</li>
+                    <li><strong>Proof:</strong> Важно требовать доказательства (screenshots, кейсы)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section id="conclusion">
+            <div class="conclusion">
+                <h2>✅ Выводы и рекомендации</h2>
+
+                <div class="insight-box" style="background: rgba(16, 185, 129, 0.1); border-left-color: #10b981;">
+                    <h3 style="color: #6ee7b7;">✅ Ниша жива и прибыльна</h3>
+                    <ul>
+                        <li>Реальные кейсы заработка: $800-$60K/месяц</li>
+                        <li>Инструменты доступны и дешевеют</li>
+                        <li>Платформы монетизации работают (Fanvue, Instagram, TikTok)</li>
+                        <li>Медиа освещение растёт</li>
+                    </ul>
+                </div>
+
+                <div class="insight-box" style="background: rgba(245, 158, 11, 0.1); border-left-color: #f59e0b;">
+                    <h3 style="color: #fcd34d;">⚠️ Барьеры и вызовы</h3>
+                    <ul>
+                        <li><strong>Насыщение рынка:</strong> Много одинаковых "блондинок"</li>
+                        <li><strong>Консистентность:</strong> Технически сложно сохранить одинаковое лицо</li>
+                        <li><strong>Верификация:</strong> OnlyFans блокирует AI-контент</li>
+                        <li><strong>Органический рост:</strong> Медленный без рекламы</li>
+                        <li><strong>Конкуренция:</strong> Растёт количество создателей</li>
+                    </ul>
+                </div>
+
+                <h3 style="margin-top: 3rem;">💡 Стратегия входа (2026)</h3>
+                
+                <div style="background: var(--glass); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; margin: 2rem 0;">
+                    <h3 style="margin-top: 0;">🎯 Для новичков:</h3>
+                    <ol style="margin-left: 1.5rem; color: var(--text-secondary);">
+                        <li style="margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">Выбрать уникальную нишу</strong> (не "идеальная блондинка")
+                            <br><em>Примеры: витилиго, веснушки, азиатка, альбинизм, гетерохромия</em>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">Создать лор персонажа</strong> (backstory, personality)
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">Освоить базовый стек:</strong>
+                            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                                <li>Генерация: Nano Banana Pro (платно) или SeaArt (freemium)</li>
+                                <li>Видео: Kling AI (Motion Control)</li>
+                                <li>Промпты: ChatGPT</li>
+                            </ul>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">Тестировать контент</strong> в Instagram Reels / TikTok
+                        </li>
+                        <li>
+                            <strong style="color: var(--text-primary);">Монетизация:</strong> Начать с рекламы, потом → Fanvue
+                        </li>
+                    </ol>
+                </div>
+
+                <div style="background: var(--glass); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 2rem; margin: 2rem 0;">
+                    <h3 style="margin-top: 0;">🚀 Для продвинутых:</h3>
+                    <ol style="margin-left: 1.5rem; color: var(--text-secondary);">
+                        <li style="margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">LoRA тренировка</strong> (ConsistencyControl через ComfyUI)
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">Масштабирование:</strong> Несколько моделей одновременно
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong style="color: var(--text-primary);">Агентство:</strong> Управление AI-инфлюенсерами для других
+                        </li>
+                        <li>
+                            <strong style="color: var(--text-primary);">Продажа курсов:</strong> Обучение созданию AI-моделей
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="do-dont">
+                    <div class="do-box">
+                        <h3>✅ ДЕЛАТЬ:</h3>
+                        <ul>
+                            <li>Уникальная внешность (выделяться!)</li>
+                            <li>Консистентность лица (LoRA или тщательный Face Swap)</li>
+                            <li>История персонажа (engagement через storytelling)</li>
+                            <li>Регулярный постинг (минимум 3-5 раз/неделю)</li>
+                            <li>Тестировать платформы (Instagram, TikTok, Threads)</li>
+                            <li>Взаимодействие с аудиторией (отвечать на комментарии)</li>
+                        </ul>
+                    </div>
+
+                    <div class="dont-box">
+                        <h3>❌ НЕ ДЕЛАТЬ:</h3>
+                        <ul>
+                            <li>Копировать стандартные образы (конкуренция огромная)</li>
+                            <li>Игнорировать консистентность (разные лица = потеря доверия)</li>
+                            <li>Сразу продавать (сначала построить аудиторию)</li>
+                            <li>Использовать OnlyFans без верификации (бан)</li>
+                            <li>Покупать курсы без проверки отзывов</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="insight-box" style="margin-top: 3rem;">
+                    <h3>🔮 Прогноз на 2026-2027:</h3>
+                    <ul>
+                        <li><strong>Рост продолжится</strong>, но требования к качеству вырастут</li>
+                        <li><strong>Уникальность станет критичной</strong> (generic faces не будут работать)</li>
+                        <li><strong>LoRA станет стандартом</strong> (консистентность обязательна)</li>
+                        <li><strong>Видео > фото</strong> (Reels, Shorts доминируют)</li>
+                        <li><strong>Voice cloning</strong> станет массовым (AI-модели заговорят)</li>
+                        <li><strong>Платформы ужесточат политику</strong> (больше проверок на AI)</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="margin-top: 3rem; border-color: var(--accent); background: rgba(124, 58, 237, 0.1);">
+                    <h3 style="margin-top: 0;">🎯 Идеальный профиль для входа:</h3>
+                    <div class="card-content">
+                        <p><strong>✨ Креативность</strong> (придумать уникальный образ)</p>
+                        <p><strong>⏳ Терпение</strong> (первые 3 месяца без дохода)</p>
+                        <p><strong>🛠 Технические навыки</strong> (базовое понимание AI)</p>
+                        <p><strong>📱 Маркетинг</strong> (понимание соцсетей)</p>
+                        <p><strong>💰 Бюджет:</strong> $0-$100/месяц (подписки на инструменты)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Составлено:</strong> 2026-02-20</p>
+        <p><strong>Автор исследования:</strong> Субагент OpenClaw</p>
+        <p><strong>Для:</strong> G (владелец)</p>
+        <p style="margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+            AI-Аватары Девушек — Исследование Ниши 2026
+        </p>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Animate progress bars when visible
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const fill = entry.target.querySelector('.progress-fill');
+                    if (fill) {
+                        fill.style.width = fill.dataset.width || '100%';
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.progress-bar').forEach(bar => {
+            progressObserver.observe(bar);
+        });
+    </script>
+</body>
+</html>
